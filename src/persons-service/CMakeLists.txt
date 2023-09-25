@@ -1,5 +1,7 @@
 project( persons-service CXX )
 
+add_subdirectory(unit_tests)
+
 add_executable( ${PROJECT_NAME} )
 
 set_property( TARGET ${PROJECT_NAME} PROPERTY CXX_STANDARD 20 )
@@ -11,6 +13,7 @@ target_sources( ${PROJECT_NAME} PRIVATE
 
     dto/PersonDTO.h
     dto/PersonDTO.cpp
+    dto/PersonPatchDTO.h
     dto/PersonPostDTO.h
     dto/PersonPostDTO.cpp
 

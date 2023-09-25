@@ -2,6 +2,7 @@
 
 #include <string>
 #include <vector>
+#include <compare>
 
 struct PersonDTO
 {
@@ -14,6 +15,8 @@ public:
     std::string address;
     std::string work;
     size_t age;
+
+    auto operator<=>(const PersonDTO&) const = default;
 };
 
 using PersonsDTO = std::vector<PersonDTO>;
