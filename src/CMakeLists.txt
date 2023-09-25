@@ -9,5 +9,5 @@ project( DISP CXX ) #set variable BACKEND_SOURCE_DIR
 include( libs )
 
 add_subdirectory( base )
-# add_subdirectory( NetLibGateWay )
+add_subdirectory( persons-service )
 add_subdirectory( NetLib )

@@ -30,6 +30,8 @@ enum method_t
 enum http_code_t
 {
     CODE_200 = 200, // OK
+    CODE_201 = 201, // Created
+    CODE_204 = 204, // No content
     CODE_400 = 400, // bad request
     CODE_401 = 401, // unauthorized
     CODE_403 = 403, // forbidden
@@ -38,30 +40,6 @@ enum http_code_t
 };
 
 } // namespace net
-
-// Сюда можно добавлять структуры и парсить их из json
-    // struct ExtraData
-    // {
-    //     ExtraData() = default;
-    // ExtraData(const std::string& json_str) {
-    //     Json::Value value;
-    //     Json::Reader reader;
-
-    //     bool parse_successfull = reader.parse(json_str, value);
-
-    //     if (!parse_successfull) {
-    //         throw JsonParserException("can't parse extra data");
-    //     }
-
-    //     auth_inf.worker_id = value["worker_id"].asUInt64();
-    // }
-    // struct AuthInf
-    // {
-    //     size_t worker_id;
-    // } auth_inf;
-    // };
-
-// TODO разбить на несколько файлов
 
 class IRequest;
 using IRequestPtr = std::shared_ptr<IRequest>;
