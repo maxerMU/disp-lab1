@@ -1,6 +1,6 @@
 project( NetLib CXX )
 
-add_subdirectory( demo )
+# add_subdirectory( demo )
 
 add_library( ${PROJECT_NAME} SHARED )
 
