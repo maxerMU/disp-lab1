@@ -28,7 +28,7 @@ std::string PersonPostDTO::ToJSON() const
     root["name"] = name;
     root["address"] = address;
     root["work"] = work;
-    root["age"] = age;
+    root["age"] = (uint) age;
 
     Json::FastWriter writer;
 

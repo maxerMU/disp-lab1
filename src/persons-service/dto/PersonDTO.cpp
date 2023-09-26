@@ -26,11 +26,11 @@ Json::Value GetJSON(const PersonDTO& person)
 {
     Json::Value root;
 
-    root["id"] = person.id;
+    root["id"] = (uint) person.id;
     root["name"] = person.name;
     root["address"] = person.address;
     root["work"] = person.work;
-    root["age"] = person.age;
+    root["age"] = (uint) person.age;
 
     return root;
 }
