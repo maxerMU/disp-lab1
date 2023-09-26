@@ -3,10 +3,10 @@ Server:
 
 DB_PERSONS:
         DB_NAME: "persons"
-        DB_USER: "persons_user"
-        DB_USER_PASSWORD: "nhcZV6bdxZtcUexlqAymrdrxAcqqbgYu"
-        DB_HOST: "dpg-ck8sle7sasqs738ts5b0-a.frankfurt-postgres.render.com"
-        DB_PORT: 5432
+        DB_USER: "postgres"
+        DB_USER_PASSWORD: "Eh1fH06bX8dkewujhEeZ"
+        DB_HOST: "containers-us-west-75.railway.app"
+        DB_PORT: 7034
 
 DB_PERSONS_TEST:
         DB_NAME: "persons"
