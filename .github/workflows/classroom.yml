@@ -41,6 +41,17 @@ jobs:
         chmod +x persons_ut
         ./persons_ut
 
+  deploy:
+    needs: unit_tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: ashishkujoy/render-deploy@v1.0.5
+      with:
+        service-id: srv-ck983rn0vg2c738obfi0
+        service-key: v8qugzZl7z8
+        api-key: rnd_COn62f3ecOLECc8qj4DUdhrO6amv
+        max-deployment-wait-ms: 3600000
+        delay-in-ms: 10000
     # name: Autograding
     # runs-on: ubuntu-latest
     # steps:
