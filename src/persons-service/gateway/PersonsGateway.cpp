@@ -14,9 +14,8 @@ void Check(const IResponsePtr &resp, const IRequestPtr &, const std::vector<std:
     resp->SetStatus(net::CODE_200);
 }
 
-void Info(const IResponsePtr &resp, const IRequestPtr &)
+void Health(const IResponsePtr &resp, const IRequestPtr &)
 {
-    resp->SetBody("status: ok");
     resp->SetStatus(net::CODE_200);
 }
 
@@ -99,6 +98,7 @@ void AddPerson(const IResponsePtr &resp, const IRequestPtr &request)
 
 void SetupRouter()
 {
+    RequestsRouter::Instanse()->AddStaticEndpoint({"/health", net::GET}, Health);
     RequestsRouter::Instanse()->AddStaticEndpoint({"/api/v1/persons", net::GET}, GetPersons);
     RequestsRouter::Instanse()->AddStaticEndpoint({"/api/v1/persons", net::POST}, AddPerson);
     RequestsRouter::Instanse()->AddDynamicEndpoint({std::regex("/api/v1/persons/([0-9\\-]+)"), net::GET}, GetPerson);

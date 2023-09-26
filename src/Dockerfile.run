@@ -1,0 +1,6 @@
+FROM maxermu/disp
+
+COPY ./ /persons
+
+RUN cd persons && cmake -DCMAKE_CXX_COMPILER:FILEPATH=/usr/bin/g++-10 -S./ -Bbuild && cd build && make && cd /
+
