@@ -16,7 +16,7 @@ jobs:
     - name: build
       run: |
         mkdir build && cd build
-        cmake ../src
+        cmake -DCMAKE_CXX_COMPILER=g++-10 ../src
         make -j12
     - uses: actions/upload-artifact@master
       with:
